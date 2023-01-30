@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "live-server --host=localhost --port=3000",
-    "complie":"tsc"
+    "complie":"tsc",
+    "watch": "npm run compile -- --watch"
   },
   "devDependencies": {
     "live-server": "^1.2.2",
