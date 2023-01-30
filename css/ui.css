@@ -1,0 +1,264 @@
+:root {
+  --black2: rgba(0, 0, 0, 0.2);
+  --white: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1rem;
+  padding: 50px 50px 100px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+table {
+  width: 100%;
+}
+hr {
+  border: none;
+  padding: 50px 0;
+}
+
+/* 팝업 */
+.popup {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  z-index: 100;
+  width: 300px;
+  height: 300px;
+}
+.dimmed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: var(--black2);
+}
+
+/* 테이블 */
+.table-type2 {
+  border-top: 1px solid #005bac;
+  border-bottom: 1px solid #005bac;
+}
+.table-type2 th,
+.table-type2 td {
+  padding: 1.6rem 2rem;
+  border-left: 1px solid #e1e1e1;
+}
+.table-type2 th {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #333;
+  text-align: left;
+}
+.table-type2 th:first-child {
+  border-left: none;
+}
+.table-type2 td {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #777;
+}
+.table-type2 tr + tr {
+  border-top: 1px solid #e1e1e1;
+}
+.table-type2 .equired {
+  color: #e20000;
+  padding-left: 0.5rem;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.table-wrap > table {
+  width: 80rem;
+}
+.table-wrap::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.table-wrap::after {
+  content: '클릭 후 \a드레그&드롭 \a하세요';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 11.2rem;
+  height: 11.2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0.5rem;
+  white-space: pre;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.table-wrap.active {
+  overflow-x: auto;
+}
+.table-wrap.active::before,
+.table-wrap.active::after {
+  display: none;
+}
+.table-wrap.active colgroup {
+  display: none;
+}
+.table-wrap.active table {
+  table-layout: auto;
+}
+
+/* select */
+.select__list {
+  position: absolute;
+  display: none;
+}
+
+/* tabs */
+.tabs nav ul {
+  display: flex;
+}
+.tabs nav button {
+  padding: 10px;
+}
+.tabs article {
+  display: none;
+  font-size: 2rem;
+}
+.tabs article.active {
+  display: block;
+}
+.tabs [class*='--active'] button {
+  border: 3px solid red;
+}
+
+/* faq */
+.board-faq__question {
+  font-size: 2rem;
+}
+.board-faq__answer {
+  display: none;
+  font-size: 2rem;
+}
+.board-faq--active button {
+  border: 2px solid red;
+}
+.board-faq--active div {
+  border: 2px solid blue;
+}
+
+/* gallery */
+.gallery-type3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+}
+@media (min-width: 0) and (max-width: 1023px) {
+  .gallery-type3 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.gallery-type3__more {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #333;
+}
+.gallery-type3__txt {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #777;
+}
+@media (min-width: 0) and (max-width: 1023px) {
+  .gallery-type3__txt {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+.gallery-type3 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+@media (min-width: 0) and (max-width: 1023px) {
+  .gallery-type3 > div {
+    gap: 1.2rem;
+  }
+}
+.gallery-box__big img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 48.8rem;
+  max-height: 30rem;
+}
+.gallery-box__list {
+  display: flex;
+  gap: 0.2rem;
+  padding-top: 0.4rem;
+}
+.gallery-box__list li {
+  flex: 1;
+}
+.gallery-box__list button {
+  background-color: transparent;
+}
+.gallery-box__list img {
+  width: 100%;
+  height: 7.2rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* btn */
+.btn-comment {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #777;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: none;
+}
+.btn-comment::after {
+  content: '';
+  border-width: 0.6rem;
+  border-style: solid;
+  border-color: #777 transparent transparent transparent;
+  transform: translateY(25%);
+}
+.btn-comment.active::after {
+  transform: translateY(-25%) rotate(180deg);
+}
+
+.btn-comment + div {
+  display: none;
+  font-size: 2rem;
+}
