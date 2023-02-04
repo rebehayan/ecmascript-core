@@ -1,5 +1,18 @@
 $(function () {
   // 일반팝업
+  function dim_open() {
+    $('body').append('<div class="dimmed"></div>');
+  }
+  function dim_close() {
+    $('.dimmed').remove();
+  }
+  function pop_close() {
+    $('.btn-close').on('click', function () {
+      $(this).parents('.popup').fadeOut(300);
+      dim_close();
+    });
+  }
+
   if ($('[data-popup]').length) {
     var $popup_con = $('[data-popup-content]');
     var $popup = $('[data-popup]');
@@ -17,20 +30,7 @@ $(function () {
     });
   }
 
-  function pop_close() {
-    $(this).parents('.popup').fadeOut(300);
-    dim_close();
-  }
-  $('.btn-close').on('click', function () {
-    pop_close();
-  });
-
-  function dim_open() {
-    $('body').append('<div class="dimmed"></div>');
-  }
-  function dim_close() {
-    $('.dimmed').remove();
-  }
+  pop_close();
 
   // 바닥클릭시 닫기
   $(document).mouseup(function (e) {
