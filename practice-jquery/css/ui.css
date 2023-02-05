@@ -139,16 +139,24 @@ hr {
 }
 
 /* tabs */
+.tab nav ul,
 .tabs nav ul {
   display: flex;
 }
+.tab nav button,
 .tabs nav button {
   padding: 10px;
 }
+.tab button.active,
+.tabs button.active {
+  background-color: aqua;
+}
+.tab article,
 .tabs article {
   display: none;
   font-size: 2rem;
 }
+.tab article.active,
 .tabs article.active {
   display: block;
 }

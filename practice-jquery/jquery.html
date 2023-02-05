@@ -8,9 +8,35 @@
     <link rel="stylesheet" href="/css/ui.css" />
     <link rel="icon" href="//jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="/js/ui/index.js"></script>
+    <script src="/js/ui/index.js" type="module"></script>
 </head>
 <body>
-    
+    <div class="tabs">
+      <nav class="tab-type1">
+        <ul>
+          <li><button class="active">탭1</button></li>
+          <li><button>탭2</button></li>
+          <li><button>탭3</button></li>
+        </ul>
+      </nav>
+      <article class="active">탭내용1</article>
+      <article>탭내용2</article>
+      <article>탭내용3</article>
+    </div>
+
+    <div class="tab" data-tabgroup>
+      <nav class="tab-type1">
+        <ul>
+          <li><button data-tab-button class="active">탭1</button></li>
+          <li><button data-tab-button>탭2</button></li>
+          <li><button data-tab-button>탭3</button></li>
+        </ul>
+      </nav>
+      <article data-tab-panel class="active">탭내용1</article>
+      <article data-tab-panel>탭내용2</article>
+      <article data-tab-panel>탭내용3</article>
+    </div>
+
+    <hr />
 </body>
 </html>
