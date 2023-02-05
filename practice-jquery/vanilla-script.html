@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vanilla Script</title>
+
+    <meta name="description" content="jQuery 코드를 바닐라 스크립트 코드로 변경하는 학습을 진행합니다." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="/css/ui.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="icon" href="https://static.cdnlogo.com/logos/j/44/javascript.svg" />
+    
+    <script type="module" src="./scripts/main.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="nav">
+      <a href="./jquery.html">jQuery 버전</a>
+    </nav>
+    
+    <div hidden class="demo-modal-dialog">
+      <h2>팝업</h2>
+      <button data-popup="pop1">팝업열기</button>
+      <div class="popup" data-popup-content="pop1">
+        팝업내용
+        <button class="btn-close">팝업닫기</button>
+      </div>
+      <hr />
+    </div>
+
+
+    <div hidden class="demo-table">
+      <table class="table-type2">
+        <caption>
+          <div>제목</div>
+        </caption>
+        <colgroup>
+          <col style="width: 20rem" />
+          <col />
+          <col style="width: 20rem" />
+          <col />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>이름<span class="equired" aria-label="필수입력">*</span></th>
+            <td>구형선</td>
+            <th>전공<span class="equired" aria-label="필수입력">*</span></th>
+            <td>금융공학, 재무관리</td>
+          </tr>
+          <tr>
+            <th>아이디<span class="equired" aria-label="필수입력">*</span></th>
+            <td>Koo_hs</td>
+            <th>비밀번호<span class="equired" aria-label="필수입력">*</span></th>
+            <td>*******</td>
+          </tr>
+          <tr>
+            <th>연구실<span class="equired" aria-label="필수입력">*</span></th>
+            <td>다산관 525</td>
+            <th>구내전화<span class="equired" aria-label="필수입력">*</span></th>
+            <td>031-219-2406</td>
+          </tr>
+          <tr>
+            <th>이메일<span class="equired" aria-label="필수입력">*</span></th>
+            <td>sadjlkgf@ajou.ac.kr</td>
+            <th>홈페이지</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>휴대폰</th>
+            <td colspan="3">010-2574-8300</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+
+
+    <div hidden class="demo-custom-select">
+      <div class="select">
+        <button>선택하세요</button>
+        <ul class="select__list">
+          <li><button>선택하세요1</button></li>
+          <li><button>선택하세요2</button></li>
+          <li><button>선택하세요3</button></li>
+          <li><button>선택하세요4</button></li>
+        </ul>
+      </div>
+      <hr />
+    </div>
+
+    <div class="demo-tabs">
+      <div class="tabs">
+        <nav class="tab-type1">
+          <ul>
+            <li><button>탭1</button></li>
+            <li><button>탭2</button></li>
+            <li><button>탭3</button></li>
+          </ul>
+        </nav>
+        <article>탭내용1</article>
+        <article>탭내용2</article>
+        <article>탭내용3</article>
+      </div>
+      <hr />
+      <div class="tabs">
+        <nav class="tab-type1">
+          <ul>
+            <li><button>탭1</button></li>
+            <li><button>탭2</button></li>
+            <li><button>탭3</button></li>
+          </ul>
+        </nav>
+        <article>탭내용1</article>
+        <article>탭내용2</article>
+        <article>탭내용3</article>
+      </div>
+      <hr/>
+      <div class="tabs">
+        <nav class="tab-type1">
+          <ul>
+            <li><button>탭1</button></li>
+            <li><button>탭2</button></li>
+            <li><button>탭3</button></li>
+          </ul>
+        </nav>
+        <article>탭내용1</article>
+        <article>탭내용2</article>
+        <article>탭내용3</article>
+      </div>
+    </div>
+
+    <div hidden class="demo-accordion">
+      <div class="board-faq">
+        <ul>
+          <li>
+            <button class="board-faq__question">질문?</button>
+            <div class="board-faq__answer">답변</div>
+          </li>
+          <li>
+            <button class="board-faq__question">질문?</button>
+            <div class="board-faq__answer">답변</div>
+          </li>
+          <li>
+            <button class="board-faq__question">질문?</button>
+            <div class="board-faq__answer">답변</div>
+          </li>
+          <li>
+            <button class="board-faq__question">질문?</button>
+            <div class="board-faq__answer">답변</div>
+          </li>
+        </ul>
+      </div>
+      <hr />
+    </div>
+
+    <div hidden class="demo-carousel">
+      <div class="gallery-type3 mt60">
+        <div>
+          <h3 class="h4">기타 동아리</h3>
+          <div class="gallery-box">
+            <div class="gallery-box__big"><img src="https://placekitten.com/g/488/300" alt="" /></div>
+            <ul class="gallery-box__list">
+              <li>
+                <button><img src="/images/@gallery1.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_1.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_2.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_3.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_4.png" alt="" /></button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="" class="gallery-type3__more">더 많은 사진 보기</a>
+          </div>
+          <p class="gallery-type3__txt">
+            아주노래방은 기타, 노래 그리고 우리들의 이야기 정(情)을 만들어가는
+            곳입니다. 기타를 하나도 모르는 분이 오셔도 지도 선배와 전문 강사로부터
+            기초에서 전문가 과정까지 하나씩 체계적으로 배워나갈 수 있습니다.
+            음악과 함께 웃어주고, 울어줄 아주 노래인(人)이 되어보시는 것은
+            어떨까요?
+          </p>
+        </div>
+        <div>
+          <h3 class="h4">밴드 동아리</h3>
+          <div class="gallery-box">
+            <div class="gallery-box__big"><img src="https://placekitten.com/g/488/300" alt="" /></div>
+            <ul class="gallery-box__list">
+              <li>
+                <button><img src="/images/@gallery1_2.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_1.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_3.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_4.png" alt="" /></button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="" class="gallery-type3__more">더 많은 사진 보기</a>
+          </div>
+          <p class="gallery-type3__txt">
+            아주대학교 경영대학원의 밴드동아리로, 각 기수별 팀을 구성하여 활동하고
+            있습니다. 각 팀들은 실력보단 음악에 대한 열정으로 모여서 활동하고
+            있습니다. 누구나 음악에 대한 열정과 사랑만 있다면 함께 할 수 있습니다.
+            음악과 함께 하는 대학원 생활로 여러분을 초대합니다~
+          </p>
+        </div>
+        <div>
+          <h3 class="h4">병원경영 MBA</h3>
+          <div class="gallery-box">
+            <div class="gallery-box__big"><img src="https://placekitten.com/g/488/300" alt="" /></div>
+            <ul class="gallery-box__list">
+              <li>
+                <button><img src="/images/@gallery1_4.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_1.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_2.png" alt="" /></button>
+              </li>
+              <li>
+                <button><img src="/images/@gallery1_3.png" alt="" /></button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="" class="gallery-type3__more">더 많은 사진 보기</a>
+          </div>
+          <p class="gallery-type3__txt">
+            우리 아주대학교 경영대학원 병원경영MBA 는 35기부터~53기까지 이어져
+            오는 10년의 전통과 역사가 있는 모임으로 2012년 7월 아주대학교
+            경영대학원 병원경영 전공 원우회 인준과 경영대학원 총동문회 직할
+            병원경영MBA동문회 인준을 받은 병원경영MBA로 선후배간의 끈끈한 유대감과
+            재학생과 동문의 자부심으로 만들어가는 아주대학교 경영대학원
+            병원경영MBA모임입니다.
+          </p>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <div hidden class="demo-toggler">
+      <button class="btn-comment">댓글의 댓글</button>
+      <div>test</div>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,19 @@
+.nav {
+  margin-bottom: 80px;
+  font-size: 16px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #1f6faa;
+}
+
+.nav a:hover {
+  color: #1a4d72;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tabs [class*="--active"] {
+  background: #e2e2e2;
+}
