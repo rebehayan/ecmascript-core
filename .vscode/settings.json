@@ -1,4 +1,7 @@
 {
+  "[html]": {
+    "editor.formatOnSave": false
+  },
   "search.exclude": {
     "**/coverage": true,
     "**/node_modules": true
@@ -58,7 +61,14 @@
   "html.validate.scripts": true,
   "html.validate.styles": true,
 
-  "colorize.languages": ["typescript", "typescriptreact", "javascript", "javascriptreact", "css", "scss"],
+  "colorize.languages": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "css",
+    "scss"
+  ],
   "css.completion.completePropertyWithSemicolon": true,
   "css.lint.unknownAtRules": "ignore",
   "css.validate": true,
