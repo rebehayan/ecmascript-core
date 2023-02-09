@@ -16,6 +16,8 @@ function init() {
 
 function setIndex() {
   $tabs.each((index, tab) => (tab.dataset.index = index));
+  // index는 index값을 받는다 네이밍만 index로 한것뿐
+  // tab은 선택자의 값을 받는다. 해당 선택자를 each로 각각 대입시킨다.
 }
 
 function bindEvents() {
