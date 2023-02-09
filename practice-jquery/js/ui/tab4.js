@@ -22,7 +22,7 @@ function setIndex() {
 function bindEvents() {
   //   $tabs.on('click', handelActivePanel);
 
-  //그냥 button.addEvent로 하지않고 forEach로 해야되는지???
+  // !!그냥 button.addEvent로 하지않고 forEach로 해야되는지???
   $tabs.forEach((button) => {
     button.addEventListener('click', handelActivePanel);
   });
