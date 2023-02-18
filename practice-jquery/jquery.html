@@ -54,6 +54,9 @@
 
     <button type="button" class="btn-popup" data-dialog-opener="dialog-a">open dialog</button>
     <div class="dialog" data-dialog="dialog-a"></div>
+
+    <button type="button" class="btn-popup" data-dialog-opener="dialog-b">open dialog2</button>
+    <div class="dialog" data-dialog="dialog-b"></div>
     
     <template data-dialog-template="dialog-a">
       <div data-dialog-head>
@@ -67,6 +70,19 @@
       </div>
     </template>
 
+
+    <template data-dialog-template="dialog-b">
+      <div data-dialog-head>
+        <h2>제목입니다.</h2>  
+      </div>
+      <div data-dialog-main>
+        <h2>내용입니다.</h2>  
+      </div>
+      <div data-dialog-foot>
+        <button type="button" data-dialog-closer="dialog-b">닫기</button>
+      </div>
+    </template>
+
     <style>
 .btn-popup {
   background-color: #fff;
@@ -74,14 +90,20 @@
   padding:10px;
   text-transform: uppercase;
 }
+.btn-popup:focus {
+  outline:2px solid red;
+}
 .dialog {
-  position: absolute;
+  position: fixed;
   left:50%;
   top:50%;
   transform: translate(-50%,-50%);
   background-color: #fff;
-  border:2px soldi #000;
+  border:2px solid #000;
   padding:10px;
+}
+.dialog:focus {
+  outline:2px solid red;
 }
     </style>
 </body>
